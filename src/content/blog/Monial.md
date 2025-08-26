@@ -1,8 +1,8 @@
 ---
 title: "Monial"
 description: "🐲"
-image: "/images/monial/monial1.jpg"
-images: ["/images/monial/monial1.jpg", "/images/monial/monial2.jpg", "/images/monial/monial3.jpg", "/images/monial/monial4.png", "/images/monial/monial5.png"]
+image: "/images/monial/monial1.webp"
+images: ["/images/monial/monial1.webp", "/images/monial/monial2.webp", "/images/monial/monial3.webp", "/images/monial/monial4.webp", "/images/monial/monial5.webp"]
 pubDate: 2025-08-26
 tags: ["二代角色"]
 ---
@@ -60,7 +60,7 @@ Monial的尾巴其实挺长的，并且比较粗壮，很有力，甚至比他�
 
 Monial的尾巴和龙角是冰凉的，所以到了夏天他很受欢迎
 
-![monial01.png](/images/monial/monial01.png)
+![monial01.webp](/images/monial/monial01.webp)
 
 这是Monial的龙设
 他不怎么变龙，主要是因为占地面积比较大不方便，但夏天的时候他会偷偷变成龙来散散热
@@ -135,7 +135,7 @@ Monial根据自己调查到线索发现了这位名叫M.M的古神形似蓝环�
 
 有一天他出门回家后，发现自己平时门上夹着的一片绿叶已经掉了下来，他知道了跟踪者在自己不在家的时候进入了自己的房子。Monial偷偷的上楼然后先是在二楼卧室的床底发现了第一位跟踪者(也就是Xenon)，Xenon直接对着Monial来一枪，子弹打了出去，但Monial的反应比较快，一枪打穿了耳朵。接着Monial一棍子把Xenon敲晕了然后用绳子绑了起来丢在了一边。
 
-![monial02.jpg](/images/monial/monial02.jpg)
+![monial02.webp](/images/monial/monial02.webp)
 
 然后Monial开始寻找第二位跟踪者。事实上第二位跟踪者就是Mithar。他当时藏在衣柜里，Xenon藏在床下。Mithar听到外面的动静后便给衣柜上了个法术的锁，然后在衣柜里给Crate打电话(因为他感受到了Monial的实力是自己打不过的)。Mithar上的锁很难用法术破除，但Monial没想这么多，暴力给拆开了。看Mithar不像Xenon那样攻击自己便把他直接拎了出来。Monia问Xenon是不是那个叛徒的亲戚，Mithar显然不知道他在说什么。后来Monial问他俩为什么跟踪自己，Mithar很聪明地报了Crate的名字，并说明自己是Crate的学生，出任务出来的。比较Crate也是神明，他希望眼前之人知道了他们老大是谁以后可以放过自己。然后Monial意识到了这是一场乌龙，告诉了Mithar事情的原委，并说明了自己也是Crate的人。这时Crate也回了电话给Mithar，俩人块儿把被敲晕的Xenon带了回去。
 
@@ -143,4 +143,4 @@ Monial根据自己调查到线索发现了这位名叫M.M的古神形似蓝环�
 
 （这里有一个bad ending，第一视角被Monial敲）
 
-![monial03.jpg](/images/monial/monial03.jpg)
+![monial03.webp](/images/monial/monial03.webp)

@@ -1,8 +1,8 @@
 ---
 title: "Dust"
 description: "👼🏼"
-image: "/images/dust/dust1.jpg"
-images: ["/images/dust/dust1.jpg", "/images/dust/dust2.jpg", "/images/dust/dust3.png"]
+image: "/images/dust/dust1.webp"
+images: ["/images/dust/dust1.webp", "/images/dust/dust2.webp", "/images/dust/dust3.webp"]
 pubDate: 2025-08-26
 tags: ["一代角色"]
 ---
