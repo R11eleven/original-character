@@ -19,7 +19,7 @@ const sortedTagCounts = Array.from(tagCounts.entries())
   .sort((a, b) => b.count - a.count);
 ---
 
-<Layout title="Bento Blog">
+<Layout title="R11's original characters">
   <TagCloud tagCounts={sortedTagCounts} />
   {posts.map(post => (
     <BentoCard
