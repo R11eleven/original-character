@@ -60,7 +60,7 @@ const { Content } = await post.render();
         if (!grid || !el) return;
         var styles = window.getComputedStyle(grid);
         var rowSize = 80;
-        var rowGap = parseFloat(styles.rowGap || styles.gap || 24);
+        var rowGap = parseFloat((styles.rowGap || styles.gap || '24'));
         el.style.gridRowEnd = 'auto';
         var height = el.getBoundingClientRect().height;
         var span = Math.ceil((height + rowGap) / (rowSize + rowGap));
@@ -194,6 +194,33 @@ const { Content } = await post.render();
     line-height: 1.8;
     opacity: 0.9;
     margin-bottom: 1rem;
+  }
+
+  /* Markdown 图片与表格通用样式 */
+  .content :global(img) {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .content :global(th),
+  .content :global(td) {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+
+  .content :global(thead) {
+    background: rgba(255, 255, 255, 0.06);
   }
 
   @media (max-width: 900px) {
