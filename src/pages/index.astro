@@ -1,18 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BentoCard from '../components/BentoCard.astro';
+import TagCloud from '../components/TagCloud.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
+
+// 计算标签统计
+const tagCounts = new Map<string, number>();
+posts.forEach(post => {
+  post.data.tags?.forEach(tag => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+
+const sortedTagCounts = Array.from(tagCounts.entries())
+  .map(([tag, count]) => ({ tag, count }))
+  .sort((a, b) => b.count - a.count);
 ---
 
 <Layout title="Bento Blog">
+  <TagCloud tagCounts={sortedTagCounts} />
   {posts.map(post => (
     <BentoCard
       title={post.data.title}
       description={post.data.description}
       image={post.data.image}
       slug={post.slug}
+      tags={post.data.tags}
     />
   ))}
 </Layout>
+
+<style>
+  /* 让标签云占两列高度一行，可按需要微调 */
+  .tag-cloud {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .tag-cloud {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+</style>

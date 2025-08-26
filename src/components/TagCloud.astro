@@ -1,0 +1,67 @@
+---
+import Tag from './Tag.astro';
+
+interface Props {
+  tagCounts: Array<{ tag: string; count: number }>;
+}
+
+const { tagCounts } = Astro.props;
+---
+
+<div class="bento-item tag-cloud">
+  <h3>Browse by Tags</h3>
+  <div class="tags">
+    {tagCounts.map(({ tag, count }) => (
+      <a href={`/tags/${tag}`} class="tag-item">
+        <Tag tag={tag} />
+        <span class="count">({count})</span>
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+  .tag-cloud {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0;
+    grid-column: span 2;
+    grid-row: span 2; /* 半高 */
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--accent-color);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+
+  .tag-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .tag-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .count {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-weight: 500;
+  }
+</style>

@@ -13,6 +13,12 @@
         "image": {
           "type": "string"
         },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "pubDate": {
           "anyOf": [
             {
@@ -28,6 +34,13 @@
               "format": "unix-time"
             }
           ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
         },
         "$schema": {
           "type": "string"

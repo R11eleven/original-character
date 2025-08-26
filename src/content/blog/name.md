@@ -1,8 +1,9 @@
 ---
-title: "CSS Grid Mastery"
-description: "Master CSS Grid layout techniques for modern web design."
+title: "name"
+description: "name."
 image: "https://picsum.photos/800/600?random=4"
 pubDate: 2024-01-04
+tags: ["CSS", "Grid", "Layout", "Web Design"]
 ---
 
 # CSS Grid Mastery

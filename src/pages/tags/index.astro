@@ -1,0 +1,89 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Tag from '../../components/Tag.astro';
+
+const posts = await getCollection('blog');
+
+const tagCounts = new Map<string, number>();
+posts.forEach(post => {
+  post.data.tags?.forEach(tag => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+
+const sortedTagCounts = Array.from(tagCounts.entries())
+  .map(([tag, count]) => ({ tag, count }))
+  .sort((a, b) => b.count - a.count);
+---
+
+<Layout title="All Tags">
+  <div class="bento-item hero no-stagger">
+    <div class="hero-text">
+      <h2>All Tags</h2>
+      <p>Browse all tags and jump to topics you like</p>
+    </div>
+  </div>
+
+  {sortedTagCounts.map(({ tag, count }) => (
+    <a href={`/tags/${tag}`} class="bento-item tag-card no-stagger">
+      <div class="row">
+        <Tag tag={tag} />
+        <span class="count">{count}</span>
+      </div>
+      <div class="row hint">See posts with this tag →</div>
+    </a>
+  ))}
+</Layout>
+
+<style>
+  /* 统一本页的入场动画，避免 nth-child 全局延时引发布局/视觉错乱 */
+  :global(.bento-grid > .no-stagger) {
+    animation-delay: 0s !important;
+    animation-duration: 0.35s !important;
+  }
+
+  .hero {
+    grid-column: 3 / span 4; /* 在logo右侧同一行 */
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-text h2 {
+    margin: 0 0 0.5rem;
+  }
+
+  .hero-text p {
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .tag-card {
+    grid-column: span 2;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.25rem;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .count {
+    opacity: 0.7;
+    font-size: 0.875rem;
+  }
+
+  .hint {
+    opacity: 0.7;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+</style>
